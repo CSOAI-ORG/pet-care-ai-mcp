@@ -1,0 +1,10 @@
+name: pet-care-ai-mcp
+description: "MEOK AI Labs — Built by MEOK AI Labs | https://meok.ai"
+vendor: MEOK AI Labs
+homepage: https://meok.ai
+repository: https://github.com/CSOAI-ORG/pet-care-ai-mcp
+license: MIT
+categories: [Pets, Health]
+tags: [pet-care, veterinary, animal-health, pet-management, pet-nutrition]
+runtime: python
+entrypoint: server.py

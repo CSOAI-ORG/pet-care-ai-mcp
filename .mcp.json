@@ -1,0 +1,24 @@
+{
+  "name": "pet-care-ai-mcp",
+  "description": "MEOK AI Labs \u2014 Built by MEOK AI Labs | https://meok.ai",
+  "vendor": "MEOK AI Labs",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/CSOAI-ORG/pet-care-ai-mcp",
+  "runtime": "python",
+  "entrypoint": "server.py",
+  "tools": [
+    "generate_feeding_schedule",
+    "track_vaccinations",
+    "identify_breed",
+    "check_health_symptoms",
+    "get_training_recommendations"
+  ],
+  "categories": [
+    "Pets",
+    "Health"
+  ],
+  "pricing": {
+    "free": "50 calls/day",
+    "pro": "$9/mo"
+  }
+}
