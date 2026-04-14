@@ -1,24 +1,151 @@
 {
   "name": "pet-care-ai-mcp",
-  "description": "MEOK AI Labs \u2014 Built by MEOK AI Labs | https://meok.ai",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/pet-care-ai-mcp",
-  "runtime": "python",
-  "entrypoint": "server.py",
+  "description": "**Pet Management Intelligence**",
+  "version": "1.0.0",
   "tools": [
-    "generate_feeding_schedule",
-    "track_vaccinations",
-    "identify_breed",
-    "check_health_symptoms",
-    "get_training_recommendations"
-  ],
-  "categories": [
-    "Pets",
-    "Health"
-  ],
-  "pricing": {
-    "free": "50 calls/day",
-    "pro": "$9/mo"
-  }
+    {
+      "name": "generate_feeding_schedule",
+      "description": "Generate a tailored feeding schedule for a pet.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "species": {
+            "type": "string"
+          },
+          "breed": {
+            "type": "string",
+            "nullable": true
+          },
+          "weight_kg": {
+            "type": "number"
+          },
+          "age_months": {
+            "type": "integer"
+          },
+          "activity_level": {
+            "type": "string"
+          },
+          "special_needs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "required": [
+          "species"
+        ]
+      }
+    },
+    {
+      "name": "track_vaccinations",
+      "description": "Track vaccination status and generate upcoming schedule.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "species": {
+            "type": "string"
+          },
+          "age_weeks": {
+            "type": "integer"
+          },
+          "vaccinations_given": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "indoor_only": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "species",
+          "age_weeks"
+        ]
+      }
+    },
+    {
+      "name": "identify_breed",
+      "description": "Identify likely breed from physical and behavioral characteristics.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "species": {
+            "type": "string"
+          },
+          "characteristics": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "species",
+          "characteristics"
+        ]
+      }
+    },
+    {
+      "name": "check_health_symptoms",
+      "description": "Check pet health symptoms and get guidance on urgency and next steps.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "species": {
+            "type": "string"
+          },
+          "symptoms": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "age_months": {
+            "type": "integer"
+          },
+          "additional_info": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "required": [
+          "species",
+          "symptoms"
+        ]
+      }
+    },
+    {
+      "name": "get_training_recommendations",
+      "description": "Get personalized training recommendations for a pet.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "species": {
+            "type": "string"
+          },
+          "breed": {
+            "type": "string",
+            "nullable": true
+          },
+          "age_months": {
+            "type": "integer"
+          },
+          "issues": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "experience_level": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "species"
+        ]
+      }
+    }
+  ]
 }

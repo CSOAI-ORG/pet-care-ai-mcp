@@ -1,10 +1,82 @@
 name: pet-care-ai-mcp
-description: "MEOK AI Labs — Built by MEOK AI Labs | https://meok.ai"
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/pet-care-ai-mcp
-license: MIT
-categories: [Pets, Health]
-tags: [pet-care, veterinary, animal-health, pet-management, pet-nutrition]
-runtime: python
-entrypoint: server.py
+description: '**Pet Management Intelligence**'
+version: 1.0.0
+tools:
+- name: generate_feeding_schedule
+  description: Generate a tailored feeding schedule for a pet.
+  parameters:
+  - name: species
+    type: string
+    required: true
+  - name: breed
+    type: string
+    required: false
+  - name: weight_kg
+    type: number
+    required: false
+  - name: age_months
+    type: integer
+    required: false
+  - name: activity_level
+    type: string
+    required: false
+  - name: special_needs
+    type: array
+    required: false
+- name: track_vaccinations
+  description: Track vaccination status and generate upcoming schedule.
+  parameters:
+  - name: species
+    type: string
+    required: true
+  - name: age_weeks
+    type: integer
+    required: true
+  - name: vaccinations_given
+    type: array
+    required: false
+  - name: indoor_only
+    type: boolean
+    required: false
+- name: identify_breed
+  description: Identify likely breed from physical and behavioral characteristics.
+  parameters:
+  - name: species
+    type: string
+    required: true
+  - name: characteristics
+    type: object
+    required: true
+- name: check_health_symptoms
+  description: Check pet health symptoms and get guidance on urgency and next steps.
+  parameters:
+  - name: species
+    type: string
+    required: true
+  - name: symptoms
+    type: array
+    required: true
+  - name: age_months
+    type: integer
+    required: false
+  - name: additional_info
+    type: string
+    required: false
+- name: get_training_recommendations
+  description: Get personalized training recommendations for a pet.
+  parameters:
+  - name: species
+    type: string
+    required: true
+  - name: breed
+    type: string
+    required: false
+  - name: age_months
+    type: integer
+    required: false
+  - name: issues
+    type: array
+    required: false
+  - name: experience_level
+    type: string
+    required: false

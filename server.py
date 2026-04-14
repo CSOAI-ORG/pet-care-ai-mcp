@@ -6,6 +6,11 @@ Feeding schedules, vaccination tracking, breed identification,
 health symptom checking, and training recommendations.
 """
 
+
+import sys, os
+sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
+from auth_middleware import check_access
+
 import time
 from datetime import datetime, timezone, timedelta
 from typing import Optional
@@ -161,7 +166,7 @@ def generate_feeding_schedule(
     weight_kg: float = 10.0,
     age_months: int = 24,
     activity_level: str = "moderate",
-    special_needs: Optional[list[str]] = None) -> dict:
+    special_needs: Optional[list[str]] = None, api_key: str = "") -> dict:
     """Generate a tailored feeding schedule for a pet.
 
     Args:
@@ -172,6 +177,10 @@ def generate_feeding_schedule(
         activity_level: low | moderate | high.
         special_needs: List like ["weight_loss", "sensitive_stomach", "senior"].
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded. Upgrade to pro tier."}
 
@@ -224,7 +233,7 @@ def track_vaccinations(
     species: str,
     age_weeks: int,
     vaccinations_given: Optional[list[str]] = None,
-    indoor_only: bool = False) -> dict:
+    indoor_only: bool = False, api_key: str = "") -> dict:
     """Track vaccination status and generate upcoming schedule.
 
     Args:
@@ -233,6 +242,10 @@ def track_vaccinations(
         vaccinations_given: List of vaccines already administered.
         indoor_only: Whether pet is indoor-only (affects non-core recommendations).
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded. Upgrade to pro tier."}
 
@@ -286,7 +299,7 @@ def track_vaccinations(
 @mcp.tool()
 def identify_breed(
     species: str,
-    characteristics: dict) -> dict:
+    characteristics: dict, api_key: str = "") -> dict:
     """Identify likely breed from physical and behavioral characteristics.
 
     Args:
@@ -294,6 +307,10 @@ def identify_breed(
         characteristics: Dict with optional keys: size (small|medium|large), weight_kg, coat_length,
                         energy_level, temperament_tags (list), color, good_with_children (bool).
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded. Upgrade to pro tier."}
 
@@ -366,7 +383,7 @@ def check_health_symptoms(
     species: str,
     symptoms: list[str],
     age_months: int = 24,
-    additional_info: Optional[str] = None) -> dict:
+    additional_info: Optional[str] = None, api_key: str = "") -> dict:
     """Check pet health symptoms and get guidance on urgency and next steps.
 
     Args:
@@ -375,6 +392,10 @@ def check_health_symptoms(
         age_months: Pet age in months.
         additional_info: Any extra context (e.g. "ate chocolate 2 hours ago").
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded. Upgrade to pro tier."}
 
@@ -422,7 +443,7 @@ def get_training_recommendations(
     breed: Optional[str] = None,
     age_months: int = 6,
     issues: Optional[list[str]] = None,
-    experience_level: str = "beginner") -> dict:
+    experience_level: str = "beginner", api_key: str = "") -> dict:
     """Get personalized training recommendations for a pet.
 
     Args:
@@ -432,6 +453,10 @@ def get_training_recommendations(
         issues: Behavioral issues to address (e.g. pulling_on_lead, barking, jumping).
         experience_level: beginner | intermediate | advanced.
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded. Upgrade to pro tier."}
 
