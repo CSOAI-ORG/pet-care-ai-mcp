@@ -13,10 +13,7 @@ from typing import Optional
 from mcp.server.fastmcp import FastMCP
 
 mcp = FastMCP(
-    "pet-care-ai",
-    version="1.0.0",
-    description="Pet care AI - feeding, vaccinations, breed ID, health checks, training",
-)
+    "pet-care-ai")
 
 # ---------------------------------------------------------------------------
 # Rate limiting
@@ -164,8 +161,7 @@ def generate_feeding_schedule(
     weight_kg: float = 10.0,
     age_months: int = 24,
     activity_level: str = "moderate",
-    special_needs: Optional[list[str]] = None,
-) -> dict:
+    special_needs: Optional[list[str]] = None) -> dict:
     """Generate a tailored feeding schedule for a pet.
 
     Args:
@@ -228,8 +224,7 @@ def track_vaccinations(
     species: str,
     age_weeks: int,
     vaccinations_given: Optional[list[str]] = None,
-    indoor_only: bool = False,
-) -> dict:
+    indoor_only: bool = False) -> dict:
     """Track vaccination status and generate upcoming schedule.
 
     Args:
@@ -291,8 +286,7 @@ def track_vaccinations(
 @mcp.tool()
 def identify_breed(
     species: str,
-    characteristics: dict,
-) -> dict:
+    characteristics: dict) -> dict:
     """Identify likely breed from physical and behavioral characteristics.
 
     Args:
@@ -372,8 +366,7 @@ def check_health_symptoms(
     species: str,
     symptoms: list[str],
     age_months: int = 24,
-    additional_info: Optional[str] = None,
-) -> dict:
+    additional_info: Optional[str] = None) -> dict:
     """Check pet health symptoms and get guidance on urgency and next steps.
 
     Args:
@@ -429,8 +422,7 @@ def get_training_recommendations(
     breed: Optional[str] = None,
     age_months: int = 6,
     issues: Optional[list[str]] = None,
-    experience_level: str = "beginner",
-) -> dict:
+    experience_level: str = "beginner") -> dict:
     """Get personalized training recommendations for a pet.
 
     Args:
