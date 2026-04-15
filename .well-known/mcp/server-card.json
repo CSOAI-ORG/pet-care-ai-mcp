@@ -1,0 +1,57 @@
+{
+  "name": "pet-care-ai",
+  "description": "\u0001",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/pet-care-ai-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "generate_feeding_schedule",
+      "description": "Generate a tailored feeding schedule for a pet."
+    },
+    {
+      "name": "track_vaccinations",
+      "description": "Track vaccination status and generate upcoming schedule."
+    },
+    {
+      "name": "identify_breed",
+      "description": "Identify likely breed from physical and behavioral characteristics."
+    },
+    {
+      "name": "check_health_symptoms",
+      "description": "Check pet health symptoms and get guidance on urgency and next steps."
+    },
+    {
+      "name": "get_training_recommendations",
+      "description": "Get personalized training recommendations for a pet."
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning",
+    "Agent Infrastructure"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
