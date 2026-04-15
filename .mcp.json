@@ -1,6 +1,6 @@
 {
   "name": "pet-care-ai-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 \u0001",
+  "description": "Pet Care Ai MCP server. Tools: generate feeding schedule, track vaccinations, identify breed. Built by MEOK AI Labs.",
   "version": "1.0.0",
   "tools": [
     {

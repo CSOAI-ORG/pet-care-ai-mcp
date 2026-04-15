@@ -1,7 +1,7 @@
 {
   "name": "pet-care-ai-mcp",
   "version": "1.0.0",
-  "description": "MEOK AI Labs — pet care MCP Server",
+  "description": "Pet Care Ai MCP server. Tools: generate feeding schedule, track vaccinations, identify breed. Built by MEOK AI Labs.",
   "main": "server.py",
   "mcp": {
     "name": "pet care",
@@ -9,10 +9,22 @@
     "homepage": "https://meok.ai",
     "repository": "https://github.com/CSOAI-ORG/pet-care-ai-mcp",
     "runtime": "python",
-    "tags": ["mcp", "mcp-server", "meok-ai-labs", "ai-tools"]
+    "tags": [
+      "mcp",
+      "mcp-server",
+      "meok-ai-labs",
+      "ai-tools"
+    ]
   },
-  "keywords": ["mcp", "mcp-server", "meok-ai-labs"],
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "meok-ai-labs"
+  ],
   "author": "MEOK AI Labs <nicholas@meok.ai>",
   "license": "MIT",
-  "repository": {"type": "git", "url": "https://github.com/CSOAI-ORG/pet-care-ai-mcp"}
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CSOAI-ORG/pet-care-ai-mcp"
+  }
 }
