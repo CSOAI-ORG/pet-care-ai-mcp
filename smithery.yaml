@@ -1,5 +1,5 @@
 name: pet-care-ai-mcp
-description: MEOK AI Labs MCP Server
+description: "\x01"
 version: 1.0.0
 tools:
 - name: generate_feeding_schedule
