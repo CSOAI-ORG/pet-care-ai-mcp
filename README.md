@@ -1,60 +1,38 @@
-# Pet Care AI MCP Server
+<div align="center">
 
-**Pet Management Intelligence**
+[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/pet-care-ai-mcp)](https://github.com/CSOAI-ORG/pet-care-ai-mcp/stargazers)
 
-Built by [MEOK AI Labs](https://meok.ai)
+# upetU careU aiU mcp
+
+****Pet Management Intelligence****
+
+[![npm version](https://img.shields.io/npm/v/@meok-ai/pet-care-ai-mcp)](https://www.npmjs.com/package/@meok-ai/pet-care-ai-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
+
+[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/pet-care-ai-mcp/issues)
+
+</div>
 
 ---
 
-An MCP server for pet owners and veterinary professionals. Generate feeding schedules, track vaccinations, identify breeds, check health symptoms, and get training recommendations for dogs and cats.
-
-## Tools
-
-| Tool | Description |
-|------|-------------|
-| `generate_feeding_schedule` | Generate calorie-calculated feeding schedules based on species, breed, weight, and activity |
-| `track_vaccinations` | Track vaccination status with overdue alerts and upcoming schedule |
-| `identify_breed` | Identify breed from physical and behavioral characteristics |
-| `check_health_symptoms` | Check symptoms against veterinary database with urgency assessment |
-| `get_training_recommendations` | Get personalized training plans for behavioral issues |
-
-## Quick Start
+## Installation
 
 ```bash
 pip install pet-care-ai-mcp
+# or
+npm install -g @meok-ai/pet-care-ai-mcp
 ```
 
-### Claude Desktop
+## Quick Start
 
-```json
-{
-  "mcpServers": {
-    "pet-care-ai": {
-      "command": "python",
-      "args": ["-m", "server"],
-      "cwd": "/path/to/pet-care-ai-mcp"
-    }
-  }
-}
-```
+See the project repository for full documentation and examples.
 
-### Direct Usage
+## Enterprise Support
 
-```bash
-python server.py
-```
-
-## Rate Limits
-
-| Tier | Requests/Hour |
-|------|--------------|
-| Free | 60 |
-| Pro | 5,000 |
+- 📧 nicholas@csoai.org
+- 🌐 [CSOAI.org](https://csoai.org)
 
 ## License
 
-MIT - see [LICENSE](LICENSE)
-
----
-
-*Part of the MEOK AI Labs MCP Marketplace*
+MIT © [CSOAI](https://csoai.org)
