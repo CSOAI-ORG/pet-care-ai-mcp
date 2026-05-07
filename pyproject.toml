@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 [project]
 name = "pet-care-ai-mcp"
-version = "1.0.4"
+version = "1.0.5"
 readme = "README.md"
 description = "Pet Care Ai MCP server. Tools: generate feeding schedule, track vaccinations, identify breed. Built by MEOK AI Labs."
 license = {file = "LICENSE"}
