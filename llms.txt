@@ -1,0 +1,32 @@
+# Pet Care Ai MCP
+
+> Pet care MCP — vaccination tracking, feeding schedules, vet appointments, breed-specific health a...
+
+`pet-care-ai-mcp` is a Model Context Protocol (MCP) server by MEOK AI Labs.
+
+## Install
+
+```bash
+pip install pet-care-ai-mcp
+```
+
+Or run without installing:
+
+```bash
+uvx pet-care-ai-mcp
+```
+
+## Tools
+
+- `generate_feeding_schedule` — Generate a tailored feeding schedule for a pet.
+- `track_vaccinations` — Track vaccination status and generate upcoming schedule.
+- `identify_breed` — Identify likely breed from physical and behavioral characteristics.
+- `check_health_symptoms` — Check pet health symptoms and get guidance on urgency and next steps.
+- `get_training_recommendations` — Get personalized training recommendations for a pet.
+
+## Links
+
+- Source: https://github.com/CSOAI-ORG/pet-care-ai-mcp
+- PyPI: https://pypi.org/project/pet-care-ai-mcp/
+- MEOK AI Labs: https://meok.ai
+- Council of AI: https://councilof.ai
