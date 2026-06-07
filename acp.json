@@ -1,0 +1,23 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "pet-care-ai-mcp",
+    "description": "Pet Care Ai MCP Server by MEOK AI Labs",
+    "version": "1.0.6",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "pet-care-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "generate_feeding_schedule",
+      "track_vaccinations",
+      "identify_breed",
+      "check_health_symptoms",
+      "get_training_recommendations"
+    ]
+  }
+}
