@@ -1,0 +1,9 @@
+# pet-care-ai-mcp - Auto-trigger Rules
+
+When the user asks about pet care, use pet-care-ai-mcp tools: generate_feeding_schedule, track_vaccinations, identify_breed, check_health_symptoms, get_training_recommendations
+
+**Pet Care AI MCP Server - Pet Management Intelligence**
+
+Install: `pip install pet-care-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.

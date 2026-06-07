@@ -1,32 +1,36 @@
-# Pet Care Ai MCP
-
-> Pet care MCP — vaccination tracking, feeding schedules, vet appointments, breed-specific health a...
-
-`pet-care-ai-mcp` is a Model Context Protocol (MCP) server by MEOK AI Labs.
+# pet-care-ai-mcp
+# **Pet Care AI MCP Server - Pet Management Intelligence**
 
 ## Install
-
 ```bash
 pip install pet-care-ai-mcp
 ```
 
-Or run without installing:
-
-```bash
-uvx pet-care-ai-mcp
-```
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
 
 ## Tools
 
-- `generate_feeding_schedule` — Generate a tailored feeding schedule for a pet.
-- `track_vaccinations` — Track vaccination status and generate upcoming schedule.
-- `identify_breed` — Identify likely breed from physical and behavioral characteristics.
-- `check_health_symptoms` — Check pet health symptoms and get guidance on urgency and next steps.
-- `get_training_recommendations` — Get personalized training recommendations for a pet.
+### `generate_feeding_schedule`
+Generate a tailored feeding schedule for a pet.
 
-## Links
+### `track_vaccinations`
+Track vaccination status and generate upcoming schedule.
 
-- Source: https://github.com/CSOAI-ORG/pet-care-ai-mcp
-- PyPI: https://pypi.org/project/pet-care-ai-mcp/
-- MEOK AI Labs: https://meok.ai
-- Council of AI: https://councilof.ai
+### `identify_breed`
+Identify likely breed from physical and behavioral characteristics.
+
+### `check_health_symptoms`
+Check pet health symptoms and get guidance on urgency and next steps.
+
+### `get_training_recommendations`
+Get personalized training recommendations for a pet.
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

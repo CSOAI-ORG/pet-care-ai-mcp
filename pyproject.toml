@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 [project]
 name = "pet-care-ai-mcp"
-version = "1.0.5"
+version = "1.0.6"
 readme = "README.md"
 description = "Pet Care Ai MCP server. Tools: generate feeding schedule, track vaccinations, identify breed. Built by MEOK AI Labs."
 license = {file = "LICENSE"}
@@ -22,7 +22,7 @@ Homepage = "https://meok.ai"
 Repository = "https://github.com/CSOAI-ORG/pet-care-ai-mcp"
 [tool.hatch.build.targets.wheel]
 packages = ["."]
-only-include = ["server.py"]
+only-include = ["server.py", "auth_middleware.py"]
 
 [project.scripts]
 pet_care_ai_mcp = "server:main"

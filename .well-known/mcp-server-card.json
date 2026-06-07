@@ -1,0 +1,28 @@
+{
+  "name": "pet-care-ai-mcp",
+  "title": "Pet Care Ai Mcp",
+  "description": "Pet Care Ai MCP server. Tools: generate feeding schedule, track vaccinations, identify breed. Built by MEOK AI Labs.",
+  "version": "1.0.6",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "generate_feeding_schedule"
+    },
+    {
+      "name": "track_vaccinations"
+    },
+    {
+      "name": "identify_breed"
+    },
+    {
+      "name": "check_health_symptoms"
+    },
+    {
+      "name": "get_training_recommendations"
+    }
+  ]
+}
