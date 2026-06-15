@@ -1,3 +1,5 @@
+import urllib.request as _meter_urlreq
+import urllib.error as _meter_urlerr
 """
 Pet Care AI MCP Server - Pet Management Intelligence
 Built by MEOK AI Labs | https://meok.ai
@@ -155,6 +157,24 @@ _SYMPTOMS_DB = {
     "coughing": {"urgency": "moderate", "possible_causes": ["kennel_cough", "heart_disease", "allergies", "tracheal_collapse", "pneumonia"], "action": "Vet visit if persistent >3 days or with difficulty breathing."},
     "not_eating": {"urgency": "high", "possible_causes": ["illness", "dental_pain", "stress", "obstruction", "nausea"], "action": "Dogs: vet if >24h. Cats: vet if >12h (risk of hepatic lipidosis)."},
 }
+
+
+def _server_meter_check(api_key: str = "") -> dict:
+    """Calls the live /verify endpoint for server-side metering. Fail-open."""
+    try:
+        data = json.dumps({"api_key": api_key, "tool": ""}).encode()
+        req = _meter_urlreq.Request(_METER_URL, data=data,
+            headers={"Content-Type": "application/json"}, method="POST")
+        with _meter_urlreq.urlopen(req, timeout=2.5) as r:
+            d = json.loads(r.read())
+            if isinstance(d, dict) and "allowed" in d:
+                return d
+    except Exception:
+        pass
+    return {"allowed": True, "tier": "anonymous", "remaining": 200, "upgrade_url": "https://meok.ai/pricing"}
+
+
+_METER_URL = "https://proofof.ai/verify"
 
 
 @mcp.tool()
