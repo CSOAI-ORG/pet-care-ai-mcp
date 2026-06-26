@@ -113,3 +113,28 @@ Free tier: 10 calls/day per MCP. Pro tier (£79/mo): unlimited + cryptographical
 
 <!-- BUY-LADDER:END -->
 
+
+
+## Configuration
+
+Add to your `claude_desktop_config.json` (Claude Desktop) or your MCP client config:
+
+```json
+{
+  "mcpServers": {
+    "pet-care-ai-mcp": {
+      "command": "uvx",
+      "args": ["pet-care-ai-mcp"]
+    }
+  }
+}
+```
+
+Or: `pip install pet-care-ai-mcp` then run the `pet-care-ai-mcp` command (stdio transport).
+
+## Examples
+
+Once configured, ask your assistant, for example:
+- "Use `generate_feeding_schedule` to …"
+- "Use `track_vaccinations` to …"
+- "Use `identify_breed` to …"
